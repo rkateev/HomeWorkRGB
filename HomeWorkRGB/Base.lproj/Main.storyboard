@@ -34,8 +34,12 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="K10-n7-NeL">
+                                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="K10-n7-NeL">
                                                 <rect key="frame" x="153.33333333333337" y="0.0" width="236.66666666666663" height="31"/>
+                                                <color key="minimumTrackTintColor" systemColor="systemRedColor"/>
+                                                <connections>
+                                                    <action selector="redAction" destination="BYZ-38-t0r" eventType="valueChanged" id="ni9-Nw-DFX"/>
+                                                </connections>
                                             </slider>
                                         </subviews>
                                         <constraints>
@@ -52,13 +56,17 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="0.00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Q2U-YE-zNU">
-                                                <rect key="frame" x="96.333333333333314" y="0.0" width="39.999999999999986" height="30"/>
+                                                <rect key="frame" x="96.333333333333329" y="0.0" width="39.999999999999986" height="30"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="oO4-nI-PVA">
+                                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="oO4-nI-PVA">
                                                 <rect key="frame" x="153.33333333333337" y="0.0" width="236.66666666666663" height="31"/>
+                                                <color key="minimumTrackTintColor" systemColor="systemGreenColor"/>
+                                                <connections>
+                                                    <action selector="greenAction" destination="BYZ-38-t0r" eventType="valueChanged" id="VBF-d0-06Y"/>
+                                                </connections>
                                             </slider>
                                         </subviews>
                                         <constraints>
@@ -80,8 +88,12 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Yxg-Tv-mRg">
+                                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Yxg-Tv-mRg">
                                                 <rect key="frame" x="153.33333333333337" y="0.0" width="236.66666666666663" height="31"/>
+                                                <color key="minimumTrackTintColor" systemColor="systemBlueColor"/>
+                                                <connections>
+                                                    <action selector="blueAction" destination="BYZ-38-t0r" eventType="valueChanged" id="khU-Ly-j9i"/>
+                                                </connections>
                                             </slider>
                                         </subviews>
                                         <constraints>
@@ -109,11 +121,14 @@
                     </view>
                     <connections>
                         <outlet property="blueLabel" destination="Wzv-n9-tPC" id="VsA-h9-8HJ"/>
+                        <outlet property="blueSlider" destination="Yxg-Tv-mRg" id="vtP-J6-7N6"/>
                         <outlet property="blueValue" destination="SSt-I2-NWE" id="tZV-zO-DBr"/>
                         <outlet property="coloredView" destination="Zol-Ji-DLT" id="PVW-Vh-KCY"/>
                         <outlet property="greenLabel" destination="ZoD-PA-bgr" id="mSR-QN-nkb"/>
+                        <outlet property="greenSlider" destination="oO4-nI-PVA" id="jTK-a7-9vx"/>
                         <outlet property="greenValue" destination="Q2U-YE-zNU" id="3CE-hH-oOT"/>
                         <outlet property="redLabel" destination="lP6-t7-43o" id="9Qf-aa-ieo"/>
+                        <outlet property="redSlider" destination="K10-n7-NeL" id="1GR-kw-WnZ"/>
                         <outlet property="redValue" destination="azp-ja-SiH" id="9Kh-9j-imC"/>
                     </connections>
                 </viewController>
@@ -125,6 +140,15 @@
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemTealColor">
             <color red="0.35294117647058826" green="0.78431372549019607" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
