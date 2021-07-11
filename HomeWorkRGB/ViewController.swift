@@ -20,7 +20,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        coloredView.backgroundColor = .black
+        changeColor()
         coloredView.layer.cornerRadius = coloredView.frame.width / 10
         
         redValue.text = String(redSlider.value)
@@ -41,6 +41,16 @@ class ViewController: UIViewController {
     @IBAction func blueAction() {
         blueValue.text = String(roundf(blueSlider.value * 1000) / 1000)
         changeColor()
+    }
+    
+    @IBAction func resetAction() {
+        coloredView.backgroundColor = .black
+        redSlider.value = 0
+        blueSlider.value = 0
+        greenSlider.value = 0
+        redValue.text = "0.0"
+        blueValue.text = "0.0"
+        greenValue.text = "0.0"
     }
     
     private func changeColor() {

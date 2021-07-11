@@ -106,16 +106,31 @@
                                 <rect key="frame" x="20" y="64" width="335" height="128"/>
                                 <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ejb-AL-kfc">
+                                <rect key="frame" x="129.66666666666666" y="621" width="116" height="106.66666666666663"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="ejb-AL-kfc" secondAttribute="height" multiplier="29:27" id="SRd-hh-IYV"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="trash.circle.fill" catalog="system">
+                                    <color key="titleColor" systemColor="systemOrangeColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="resetAction" destination="BYZ-38-t0r" eventType="touchUpInside" id="cMK-4L-2NI"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemTealColor"/>
                         <constraints>
                             <constraint firstItem="Zol-Ji-DLT" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.157635" id="1IF-5x-s6l"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ejb-AL-kfc" secondAttribute="bottom" constant="50" id="3Oi-PF-E3Q"/>
+                            <constraint firstItem="ejb-AL-kfc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="3j0-D7-1fg"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Zol-Ji-DLT" secondAttribute="trailing" constant="20" id="CbZ-u7-re5"/>
                             <constraint firstItem="Zol-Ji-DLT" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="EpI-FM-krW"/>
                             <constraint firstItem="Zol-Ji-DLT" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="GjX-jx-iwd"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="pju-6Q-eTY" secondAttribute="trailing" constant="20" id="YyT-I6-QBU"/>
                             <constraint firstItem="pju-6Q-eTY" firstAttribute="top" secondItem="Zol-Ji-DLT" secondAttribute="bottom" constant="46" id="jZv-JG-Uoe"/>
+                            <constraint firstItem="ejb-AL-kfc" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.309333" id="ovQ-Ql-9xE"/>
                             <constraint firstItem="pju-6Q-eTY" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="uqO-v1-EfL"/>
                         </constraints>
                     </view>
@@ -131,15 +146,19 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="35" y="94"/>
+            <point key="canvasLocation" x="34.399999999999999" y="93.842364532019715"/>
         </scene>
     </scenes>
     <resources>
+        <image name="trash.circle.fill" catalog="system" width="128" height="121"/>
         <systemColor name="systemBlueColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGreenColor">
             <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemRedColor">
             <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
