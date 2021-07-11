@@ -9,12 +9,11 @@ import UIKit
 
 class ViewController: UIViewController {
     @IBOutlet weak var coloredView: UIView!
-    @IBOutlet weak var redLabel: UILabel!
+    
     @IBOutlet weak var redValue: UILabel!
-    @IBOutlet weak var greenLabel: UILabel!
     @IBOutlet weak var greenValue: UILabel!
-    @IBOutlet weak var blueLabel: UILabel!
     @IBOutlet weak var blueValue: UILabel!
+    
     @IBOutlet weak var redSlider: UISlider!
     @IBOutlet weak var greenSlider: UISlider!
     @IBOutlet weak var blueSlider: UISlider!
@@ -31,17 +30,21 @@ class ViewController: UIViewController {
     }
     @IBAction func redAction() {
         redValue.text = String(roundf(redSlider.value * 1000) / 1000)
-        coloredView.backgroundColor = UIColor(red: CGFloat(redSlider.value), green: CGFloat(greenSlider.value), blue: CGFloat(blueSlider.value), alpha: 1)
+        changeColor()
     }
     
     @IBAction func greenAction() {
         greenValue.text = String(roundf(greenSlider.value * 1000) / 1000)
+        changeColor()
     }
     
     @IBAction func blueAction() {
         blueValue.text = String(roundf(blueSlider.value * 1000) / 1000)
+        changeColor()
     }
     
-
+    private func changeColor() {
+        coloredView.backgroundColor = UIColor(red: CGFloat(redSlider.value), green: CGFloat(greenSlider.value), blue: CGFloat(blueSlider.value), alpha: 1)
+    }
 }
 
