@@ -31,7 +31,7 @@ class ViewController: UIViewController {
     }
     @IBAction func redAction() {
         redValue.text = String(roundf(redSlider.value * 1000) / 1000)
-        
+        coloredView.backgroundColor = UIColor(red: CGFloat(redSlider.value), green: CGFloat(greenSlider.value), blue: CGFloat(blueSlider.value), alpha: 1)
     }
     
     @IBAction func greenAction() {
