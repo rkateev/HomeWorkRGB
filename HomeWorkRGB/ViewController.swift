@@ -23,23 +23,23 @@ class ViewController: UIViewController {
         changeColor()
         coloredView.layer.cornerRadius = coloredView.frame.width / 10
         
-        redValue.text = String(redSlider.value)
-        greenValue.text = String(greenSlider.value)
-        blueValue.text = String(blueSlider.value)
+        redValue.text = String(format: "%0.3f", redSlider.value)
+        greenValue.text = String(format: "%0.3f", greenSlider.value)
+        blueValue.text = String(format: "%0.3f", blueSlider.value)
         
     }
     @IBAction func redAction() {
-        redValue.text = String(roundf(redSlider.value * 1000) / 1000)
+        redValue.text = String(format: "%0.3f", roundf(redSlider.value * 1000) / 1000)
         changeColor()
     }
     
     @IBAction func greenAction() {
-        greenValue.text = String(roundf(greenSlider.value * 1000) / 1000)
+        greenValue.text = String(format: "%0.3f", roundf(greenSlider.value * 1000) / 1000)
         changeColor()
     }
     
     @IBAction func blueAction() {
-        blueValue.text = String(roundf(blueSlider.value * 1000) / 1000)
+        blueValue.text = String(format: "%0.3f", roundf(blueSlider.value * 1000) / 1000)
         changeColor()
     }
     
