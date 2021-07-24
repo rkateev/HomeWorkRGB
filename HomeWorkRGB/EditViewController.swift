@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class EditViewController: UIViewController {
     @IBOutlet weak var coloredView: UIView!
     
     @IBOutlet weak var redValue: UILabel!
@@ -43,15 +43,7 @@ class ViewController: UIViewController {
         changeColor()
     }
     
-    @IBAction func resetAction() {
-        coloredView.backgroundColor = .black
-        redSlider.value = 0
-        blueSlider.value = 0
-        greenSlider.value = 0
-        redValue.text = "0.0"
-        blueValue.text = "0.0"
-        greenValue.text = "0.0"
-    }
+    
     
     private func changeColor() {
         coloredView.backgroundColor = UIColor(red: CGFloat(redSlider.value), green: CGFloat(greenSlider.value), blue: CGFloat(blueSlider.value), alpha: 1)
