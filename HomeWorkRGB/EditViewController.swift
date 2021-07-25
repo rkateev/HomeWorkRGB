@@ -18,9 +18,16 @@ class EditViewController: UIViewController {
     @IBOutlet weak var greenSlider: UISlider!
     @IBOutlet weak var blueSlider: UISlider!
     
+    var startColor: UIColor!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        changeColor()
+        coloredView.backgroundColor = startColor
+        
+        redSlider.value = Float(readColors()[0])
+        greenSlider.value = Float(readColors()[1])
+        blueSlider.value = Float(readColors()[2])
+        
         coloredView.layer.cornerRadius = coloredView.frame.width / 10
         
         redValue.text = String(format: "%0.3f", redSlider.value)
@@ -50,3 +57,14 @@ class EditViewController: UIViewController {
     }
 }
 
+extension EditViewController {
+    private func readColors() -> [CGFloat] {
+        var red: CGFloat = 0
+        var green: CGFloat = 0
+        var blue: CGFloat = 0
+        var alpha: CGFloat = 0
+        
+        startColor.getRed(&red, green: &green, blue: &blue, alpha: &alpha)
+        return [red, green, blue]
+    }
+}
