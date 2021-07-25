@@ -19,6 +19,7 @@ class EditViewController: UIViewController {
     @IBOutlet weak var blueSlider: UISlider!
     
     var startColor: UIColor!
+    var delegate: EditViewControllerDelegate!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -50,6 +51,10 @@ class EditViewController: UIViewController {
         changeColor()
     }
     
+    @IBAction func doneButton() {
+        delegate.setNewColor(coloredView.backgroundColor ?? .white)
+        dismiss(animated: true)
+    }
     
     
     private func changeColor() {
@@ -67,4 +72,5 @@ extension EditViewController {
         startColor.getRed(&red, green: &green, blue: &blue, alpha: &alpha)
         return [red, green, blue]
     }
+    
 }

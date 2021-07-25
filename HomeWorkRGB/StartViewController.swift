@@ -7,8 +7,11 @@
 
 import UIKit
 
-class StartViewController: UIViewController {
+protocol EditViewControllerDelegate {
+    func setNewColor(_ color: UIColor)
+}
 
+class StartViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -17,6 +20,14 @@ class StartViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let editVC = segue.destination as? EditViewController else { return }
         editVC.startColor = view.backgroundColor
+        editVC.delegate = self
     }
   
+}
+
+extension StartViewController: EditViewControllerDelegate {
+    func setNewColor(_ color: UIColor) {
+        view.backgroundColor = color
+    }
+    
 }
